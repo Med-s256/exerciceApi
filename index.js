@@ -1,0 +1,10 @@
+const express = require('express');
+const router = require('./routes/auroutes');
+const app = express();
+require('dotenv').config();
+const port = process.env.PORT || 3000;
+app.set('views', './views');
+app.set('view engine', 'pug');
+app.use(express.json());
+app.use('/', router);
+app.listen(port, ()=>console.log(`the server is running on port ${port}`));

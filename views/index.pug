@@ -1,0 +1,12 @@
+title=title 
+body 
+    table(border=1) 
+        tr  
+            th startime 
+            th windspeed 
+            th direction 
+        each val in JSON.stringify(json) 
+            tr 
+                td #{val.data.timelines.intervals.startTime}
+                td #{val.data.timelines.intervals.windSpeed}
+                td #{val.data.timelines.intervals.windDirection}
